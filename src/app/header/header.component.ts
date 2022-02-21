@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  name: string;
+
+  constructor() {
+    this.name = "Sean";
+  }
 
   ngOnInit(): void {
   }
 
+  getWelcomeMessage(): string {
+    return `Welcome to ${this.name}'s New Angular Application!`;
+  }
 }

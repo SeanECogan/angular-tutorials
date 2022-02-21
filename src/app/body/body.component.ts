@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
 
-  constructor() { }
+  currentTime: Date;
+
+  constructor() {
+    this.currentTime = new Date();
+
+    setInterval(() => {
+      this.currentTime = this.getCurrentTime();
+    }, 1000);
+  }
 
   ngOnInit(): void {
   }
 
+  getCurrentTime(): Date {
+    return new Date();
+  }
 }
