@@ -1,0 +1,7 @@
+<ol *ngIf="favoriteBooks.length <= 5">
+    <li *ngFor="let favoriteBook of favoriteBooks">
+        <app-book-list-item [title]="favoriteBook"></app-book-list-item>
+    </li>
+</ol>
+
+<p *ngIf="favoriteBooks.length > 5">The list of favorite books is too long to show here.</p>

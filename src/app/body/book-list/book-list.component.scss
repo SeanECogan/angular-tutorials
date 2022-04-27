@@ -1,0 +1,14 @@
+ol {
+    li {
+        margin-bottom: 0.75rem;
+        font-weight: bold;
+    }
+
+    li:nth-child(2n+1) {
+        color: #0A5662;
+    }
+
+    li:nth-child(2n) {
+        color: #62420A;
+    }
+}
