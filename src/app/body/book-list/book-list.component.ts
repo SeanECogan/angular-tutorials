@@ -7,20 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookListComponent implements OnInit {
 
+  showBookList: boolean;
   favoriteBooks: string[];
+  newBookTitle: string;
 
   constructor() {
-    this.favoriteBooks = [
-      "The Fellowship of the Ring",
-      "The Eye of the World",
-      "Dune",
-      "The Two Towers",
-      "The Return of the King",
-      "A Memory of Light"
-    ];
+    this.showBookList = true;
+
+    this.favoriteBooks = [];
+
+    this.newBookTitle = '';
   }
 
   ngOnInit(): void {
   }
 
+  toggleShowBookList(): void {
+    this.showBookList = !this.showBookList;
+  }
+
+  addNewBookTitle(): void {
+    this.favoriteBooks.push(this.newBookTitle);
+
+    this.newBookTitle = '';
+  }
 }

@@ -1,7 +1,15 @@
-<ol *ngIf="favoriteBooks.length <= 5">
+<div *ngIf="showBookList">
+    <input type="text" [(ngModel)]="newBookTitle" />
+    <button (click)="addNewBookTitle()">Add new book to list</button>
+</div>
+
+<ol *ngIf="showBookList">
     <li *ngFor="let favoriteBook of favoriteBooks">
         <app-book-list-item [title]="favoriteBook"></app-book-list-item>
     </li>
 </ol>
 
-<p *ngIf="favoriteBooks.length > 5">The list of favorite books is too long to show here.</p>
+<button (click)="toggleShowBookList()">
+    <span *ngIf="!showBookList">Show Book List</span>
+    <span *ngIf="showBookList">Hide Book List</span>
+</button>
