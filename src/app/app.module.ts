@@ -7,7 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { BookListComponent } from './body/book-list/book-list.component';
 import { BookListItemComponent } from './body/book-list-item/book-list-item.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FeedbackFormComponent } from './feedback-form/feedback-form.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,14 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     BodyComponent,
     BookListComponent,
-    BookListItemComponent
+    BookListItemComponent,
+    FeedbackFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

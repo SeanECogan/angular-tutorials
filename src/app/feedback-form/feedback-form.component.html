@@ -1,0 +1,17 @@
+<div>
+    <div>
+        <label for="feedback-submitter">Name:</label>
+        <input id="feedback-submitter" type="text" [formControl]="feedbackSubmitter" />
+    </div>
+    <div>
+        <label for="feedback-score">Feedback Score (1-10):</label>
+        <input id="feedback-score" type="number" [formControl]="feedbackScore" />
+    </div>
+    <div>
+        <label for="feedback-comments">Comments:</label>
+        <input id="feedback-comments" type="text" [formControl]="feedbackComments" />
+    </div>
+    <div>
+        <button type="submit" (click)="submitFeedback()">Submit</button>
+    </div>
+</div>
